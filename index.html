@@ -568,12 +568,12 @@
       <h2 class="section-title" data-i18n="projects.title">What I build on my own time</h2>
     </div>
     <div class="cases reveal">
-      <div class="case-card placeholder-card">
-        <div class="case-tags"><span class="tag">SaaS</span></div>
-        <h3 class="case-title" data-i18n="projects.p1.title">[Project name — tell me what to put here]</h3>
-        <p class="case-body" data-i18n="projects.p1.body">[Short description: what it does, why you built it, and the stack you used.]</p>
+      <div class="case-card">
+        <div class="case-tags"><span class="tag">SaaS</span><span class="tag" data-i18n="work.tag.b2b">B2B Marketplace</span></div>
+        <h3 class="case-title">RetailIQ</h3>
+        <p class="case-body" data-i18n="projects.p1.body">An intelligent platform connecting retailers and suppliers — streamlining the purchasing cycle and enabling faster, more assertive and more strategic decisions.</p>
         <div class="case-metrics">
-          <div class="metric"><b data-i18n="projects.p1.mk">Status</b><span data-i18n="projects.p1.mv">Send me the details and I'll fill this in</span></div>
+          <div class="metric"><b data-i18n="projects.p1.mk">Private repository</b><span data-i18n="projects.p1.mv">Code not publicly available</span></div>
         </div>
       </div>
     </div>
@@ -652,10 +652,12 @@
 <section class="contact" id="contact">
   <div class="wrap contact-inner reveal">
     <p class="kicker" style="justify-content:center; display:flex;" data-i18n="contact.kicker">Let's talk</p>
-    <h2 data-i18n-html="contact.title">Open to remote strategic roles<br>in USD or EUR.</h2>
     <p data-i18n="contact.body">If your team needs someone who can move fluidly between boardroom strategy and hands-on execution — let's talk. I reply fast and I'm easy to schedule with across US and European time zones.</p>
 
     <form class="contact-form" id="contact-form" novalidate>
+      <input type="hidden" name="access_key" value="PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+      <input type="hidden" name="subject" value="New message from your portfolio">
+      <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
       <div class="form-row">
         <label for="cf-name" data-i18n="contact.form.name">Name</label>
         <input type="text" id="cf-name" name="name" autocomplete="name" required>
@@ -673,7 +675,7 @@
         <textarea id="cf-message" name="message" rows="5"></textarea>
       </div>
       <button type="submit" class="btn btn-solid" data-i18n="contact.form.submit">Send message</button>
-      <p class="form-note" data-i18n="contact.form.note">This opens your email app with everything filled in, addressed to pedro.scheik@gmail.com — you just hit send.</p>
+      <p class="form-note" data-i18n="contact.form.note">Sent directly to Pedro — no email app needed.</p>
       <p class="form-status" id="cf-status"></p>
     </form>
 
@@ -767,18 +769,20 @@
       "cert.3":"Applied Statistics — IFRS",
       "cert.4":"Strategic Management — IFRS",
       "cert.5":"Financial Planning — IFRS",
-      "contact.kicker":"Let's talk","contact.title":"Open to remote strategic roles<br>in USD or EUR.",
+      "contact.kicker":"Let's talk",
       "contact.body":"If your team needs someone who can move fluidly between boardroom strategy and hands-on execution — let's talk. I reply fast and I'm easy to schedule with across US and European time zones.",
       "contact.status":"Based in Brazil (GMT-3) — overlaps well with US and European working hours",
       "contact.form.name":"Name","contact.form.whatsapp":"WhatsApp","contact.form.email":"Email","contact.form.message":"Message",
       "contact.form.submit":"Send message",
-      "contact.form.note":"This opens your email app with everything filled in, addressed to pedro.scheik@gmail.com — you just hit send.",
-      "contact.form.opened":"Opening your email app…",
+      "contact.form.note":"Sent directly to me — no email app needed.",
+      "contact.form.sending":"Sending…",
+      "contact.form.success":"Message sent — thank you! I'll get back to you soon.",
+      "contact.form.error":"Something went wrong — please email me directly at pedro.scheik@gmail.com.",
       "contact.or":"OR REACH ME DIRECTLY",
       "projects.kicker":"Personal projects","projects.title":"What I build on my own time",
-      "projects.p1.title":"[Project name — tell me what to put here]",
-      "projects.p1.body":"[Short description: what it does, why you built it, and the stack you used.]",
-      "projects.p1.mk":"Status","projects.p1.mv":"Send me the details and I'll fill this in",
+      "projects.p1.body":"An intelligent platform connecting retailers and suppliers — streamlining the purchasing cycle and enabling faster, more assertive and more strategic decisions.",
+      "projects.p1.mk":"Private repository","projects.p1.mv":"Code not publicly available",
+      "work.tag.b2b":"B2B Marketplace",
       "footer.text":"© 2026 Pedro Enrique Scheik"
     },
     pt: {
@@ -847,18 +851,20 @@
       "cert.3":"Estatística Aplicada — IFRS",
       "cert.4":"Administração Estratégica — IFRS",
       "cert.5":"Planejamento Financeiro — IFRS",
-      "contact.kicker":"Vamos conversar","contact.title":"Aberto a vagas remotas estratégicas<br>em dólar ou euro.",
+      "contact.kicker":"Vamos conversar",
       "contact.body":"Se o seu time precisa de alguém que transite bem entre estratégia de alto nível e execução prática — vamos conversar. Respondo rápido e é fácil marcar horários comigo entre fusos dos EUA e da Europa.",
       "contact.status":"Baseado no Brasil (GMT-3) — boa sobreposição de horário com EUA e Europa",
       "contact.form.name":"Nome","contact.form.whatsapp":"WhatsApp","contact.form.email":"E-mail","contact.form.message":"Mensagem",
       "contact.form.submit":"Enviar mensagem",
-      "contact.form.note":"Isso abre seu aplicativo de e-mail com tudo preenchido, endereçado a pedro.scheik@gmail.com — você só precisa enviar.",
-      "contact.form.opened":"Abrindo seu aplicativo de e-mail…",
+      "contact.form.note":"Enviado diretamente para mim — sem precisar abrir aplicativo de e-mail.",
+      "contact.form.sending":"Enviando…",
+      "contact.form.success":"Mensagem enviada — obrigado! Vou te responder em breve.",
+      "contact.form.error":"Algo deu errado — por favor me envie um e-mail diretamente em pedro.scheik@gmail.com.",
       "contact.or":"OU FALE DIRETAMENTE COMIGO",
       "projects.kicker":"Projetos pessoais","projects.title":"O que eu construo no meu tempo livre",
-      "projects.p1.title":"[Nome do projeto — me diga o que colocar aqui]",
-      "projects.p1.body":"[Descrição curta: o que faz, por que você construiu, e as tecnologias usadas.]",
-      "projects.p1.mk":"Status","projects.p1.mv":"Me envie os detalhes que eu preencho",
+      "projects.p1.body":"Uma plataforma inteligente que conecta varejistas e fornecedores — otimiza o ciclo de compras e permite decisões mais rápidas, assertivas e estratégicas.",
+      "projects.p1.mk":"Repositório privado","projects.p1.mv":"Código não disponível publicamente",
+      "work.tag.b2b":"Marketplace B2B",
       "footer.text":"© 2026 Pedro Enrique Scheik"
     },
     es: {
@@ -927,18 +933,20 @@
       "cert.3":"Estadística Aplicada — IFRS",
       "cert.4":"Administración Estratégica — IFRS",
       "cert.5":"Planificación Financiera — IFRS",
-      "contact.kicker":"Hablemos","contact.title":"Abierto a roles remotos estratégicos<br>en USD o EUR.",
+      "contact.kicker":"Hablemos",
       "contact.body":"Si tu equipo necesita a alguien que se mueva con fluidez entre la estrategia de alto nivel y la ejecución práctica — hablemos. Respondo rápido y es fácil coordinar horarios conmigo entre EE. UU. y Europa.",
       "contact.status":"Radicado en Brasil (GMT-3) — buen solape horario con EE. UU. y Europa",
       "contact.form.name":"Nombre","contact.form.whatsapp":"WhatsApp","contact.form.email":"Correo electrónico","contact.form.message":"Mensaje",
       "contact.form.submit":"Enviar mensaje",
-      "contact.form.note":"Esto abre tu aplicación de correo con todo completado, dirigido a pedro.scheik@gmail.com — solo tienes que enviarlo.",
-      "contact.form.opened":"Abriendo tu aplicación de correo…",
+      "contact.form.note":"Enviado directamente a mí — no necesitas abrir tu app de correo.",
+      "contact.form.sending":"Enviando…",
+      "contact.form.success":"Mensaje enviado — ¡gracias! Te responderé pronto.",
+      "contact.form.error":"Algo salió mal — por favor escríbeme directamente a pedro.scheik@gmail.com.",
       "contact.or":"O CONTÁCTAME DIRECTAMENTE",
       "projects.kicker":"Proyectos personales","projects.title":"Lo que construyo en mi tiempo libre",
-      "projects.p1.title":"[Nombre del proyecto — dime qué poner aquí]",
-      "projects.p1.body":"[Descripción breve: qué hace, por qué lo construiste y qué tecnologías usaste.]",
-      "projects.p1.mk":"Estado","projects.p1.mv":"Envíame los detalles y lo completo",
+      "projects.p1.body":"Una plataforma inteligente que conecta a minoristas y proveedores — optimiza el ciclo de compras y permite decisiones más rápidas, asertivas y estratégicas.",
+      "projects.p1.mk":"Repositorio privado","projects.p1.mv":"Código no disponible públicamente",
+      "work.tag.b2b":"Marketplace B2B",
       "footer.text":"© 2026 Pedro Enrique Scheik"
     }
   };
@@ -978,29 +986,40 @@
   /* ---------------- contact form ---------------- */
   const cfForm = document.getElementById('contact-form');
   if(cfForm){
-    cfForm.addEventListener('submit', function(e){
+    cfForm.addEventListener('submit', async function(e){
       e.preventDefault();
-      const name = document.getElementById('cf-name').value.trim();
-      const whatsapp = document.getElementById('cf-whatsapp').value.trim();
-      const email = document.getElementById('cf-email').value.trim();
-      const message = document.getElementById('cf-message').value.trim();
-
-      const subject = encodeURIComponent('Portfolio contact — ' + (name || 'New message'));
-      const bodyLines = [
-        'Name: ' + (name || '-'),
-        'WhatsApp: ' + (whatsapp || '-'),
-        'Email: ' + (email || '-'),
-        '',
-        'Message:',
-        message || '-'
-      ];
-      const body = encodeURIComponent(bodyLines.join('\n'));
-      window.location.href = 'mailto:pedro.scheik@gmail.com?subject=' + subject + '&body=' + body;
-
       const status = document.getElementById('cf-status');
-      const dict = translations[document.documentElement.getAttribute('lang') === 'pt-BR' ? 'pt' : (document.documentElement.getAttribute('lang') || 'en')] || translations.en;
-      status.textContent = dict['contact.form.opened'] || 'Opening your email app…';
-      status.classList.add('show');
+      const submitBtn = cfForm.querySelector('button[type="submit"]');
+      const dict = translations[localStorage.getItem('site-lang')] || translations.en;
+
+      status.classList.remove('show');
+      status.style.color = 'var(--accent-2)';
+      submitBtn.disabled = true;
+      const originalLabel = submitBtn.textContent;
+      submitBtn.textContent = dict['contact.form.sending'] || 'Sending…';
+
+      try {
+        const formData = new FormData(cfForm);
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+        const result = await res.json();
+        if(res.ok && result.success){
+          status.textContent = dict['contact.form.success'] || 'Message sent — thank you! I\'ll get back to you soon.';
+          cfForm.reset();
+        } else {
+          throw new Error(result.message || 'submit failed');
+        }
+      } catch(err){
+        status.style.color = '#e07a5f';
+        status.textContent = dict['contact.form.error'] || 'Something went wrong — please email me directly at pedro.scheik@gmail.com.';
+      } finally {
+        status.classList.add('show');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
     });
   }
 </script>
