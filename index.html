@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedro Enrique Scheik — Digital & Business Transformation</title>
+<meta name="description" content="Pedro Enrique Scheik — Digital & Business Transformation Specialist. Strategy, AI, operational excellence and change leadership.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#121A24;
+    --ink-2:#0B1017;
+    --paper:#EFEAE0;
+    --paper-2:#E4DECF;
+    --accent:#E7A94C;
+    --accent-2:#4FA6A0;
+    --text-light:#E9E5DA;
+    --text-light-dim:#A9B1BE;
+    --text-dark:#1B2028;
+    --text-dark-dim:#5B6270;
+    --line-dark: rgba(233,229,218,0.14);
+    --line-light: rgba(27,32,40,0.12);
+    --display: 'Space Grotesk', sans-serif;
+    --body: 'IBM Plex Sans', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+    --maxw: 900px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--text-light);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit;}
+  ::selection{background:var(--accent); color:var(--ink-2);}
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+  }
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+
+  #top, #about, #experience, #work, #projects, #contact{ scroll-margin-top: 84px; }
+
+  /* NAV */
+  .nav{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    background:rgba(18,26,36,0.86);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line-dark);
+  }
+  .nav-inner{
+    max-width:var(--maxw); margin:0 auto; padding:16px 28px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .mark{
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--mono); font-size:13px; letter-spacing:0.04em;
+    text-decoration:none;
+  }
+  .mark-box{
+    width:28px; height:28px; border:1px solid var(--accent-2);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--accent); font-size:11px; font-weight:500;
+    border-radius:3px;
+  }
+  .nav-links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .nav-links a{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase;
+    text-decoration:none; color:var(--text-light-dim);
+    transition:color .2s;
+    position:relative;
+  }
+  .nav-links a:hover{color:var(--text-light);}
+  @media (max-width:640px){ .nav-links{display:none;} }
+
+  .nav-right{display:flex; align-items:center; gap:22px;}
+
+  .icon-link{
+    display:flex; align-items:center; justify-content:center;
+    width:30px; height:30px; border-radius:50%;
+    color:var(--text-light-dim); border:1px solid var(--line-dark);
+    transition:color .2s, border-color .2s;
+  }
+  .icon-link:hover{color:var(--text-light); border-color:var(--accent-2);}
+  .icon-link svg{width:15px; height:15px;}
+
+  /* LANG SWITCHER */
+  .lang-switch{
+    display:flex; align-items:center; border:1px solid var(--line-dark); border-radius:20px;
+    padding:3px; gap:2px;
+  }
+  .lang-btn{
+    font-family:var(--mono); font-size:11px; letter-spacing:0.04em;
+    background:none; border:none; color:var(--text-light-dim);
+    padding:6px 11px; border-radius:16px; cursor:pointer;
+    transition:background .2s, color .2s;
+  }
+  .lang-btn:hover{color:var(--text-light);}
+  .lang-btn.active{background:var(--accent); color:var(--ink-2); font-weight:500;}
+
+  /* HERO */
+  .hero{
+    min-height:100svh;
+    display:flex; flex-direction:column; justify-content:center;
+    padding:120px 0 60px;
+    position:relative;
+    overflow:hidden;
+  }
+  .eyebrow{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--accent-2);
+    margin:0 0 22px;
+  }
+  .eyebrow::before{content:"● "; color:var(--accent);}
+  h1.name{
+    font-family:var(--display); font-weight:700;
+    font-size:clamp(2.4rem, 7vw, 4.4rem);
+    line-height:1.02; margin:0 0 20px; letter-spacing:-0.01em;
+    color:var(--text-light);
+  }
+  .hero-sub{
+    font-size:clamp(1.05rem, 2vw, 1.3rem);
+    max-width:660px; color:var(--text-light-dim);
+    margin:0 0 30px;
+    font-weight:400;
+  }
+  .hero-sub strong{color:var(--text-light); font-weight:500;}
+
+  .hero-badges{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:38px;}
+  .badge{
+    font-family:var(--mono); font-size:11.5px; letter-spacing:0.03em;
+    padding:8px 14px; border-radius:20px; border:1px solid var(--accent);
+    color:var(--accent); display:inline-flex; align-items:center; gap:7px;
+  }
+  .badge svg{width:12px; height:12px; flex-shrink:0;}
+
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:64px;}
+  .btn{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:0.05em; text-transform:uppercase;
+    padding:13px 22px; text-decoration:none; border-radius:3px;
+    display:inline-flex; align-items:center; gap:8px;
+    transition:transform .15s ease, background .2s, border-color .2s;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-solid{background:var(--accent); color:var(--ink-2); border:1px solid var(--accent);}
+  .btn-solid:hover{background:#f0ba68;}
+  .btn-line{border:1px solid var(--line-dark); color:var(--text-light);}
+  .btn-line:hover{border-color:var(--accent-2);}
+
+  /* Flow diagram signature */
+  .flow{width:100%; max-width:760px;}
+  .flow svg{width:100%; height:auto; display:block;}
+  .flow-path{
+    fill:none; stroke:var(--accent-2); stroke-width:1.5;
+    stroke-dasharray:8 6;
+    animation:dash 30s linear infinite;
+  }
+  @keyframes dash{ to{ stroke-dashoffset:-400; } }
+  .flow-node-ring{fill:none; stroke:var(--line-dark); stroke-width:1;}
+  .flow-node{fill:var(--ink-2); stroke:var(--accent); stroke-width:1.4;}
+  .flow-node.lit{stroke:var(--accent); fill:var(--accent);}
+  .flow-label{
+    font-family:var(--mono); font-size:11px; fill:var(--text-light-dim); letter-spacing:0.03em;
+  }
+  .flow-label.hl{fill:var(--accent-2);}
+
+  /* SECTION shared */
+  section{padding:96px 0;}
+  .section-head{margin-bottom:44px;}
+  .kicker{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--accent-2); margin:0 0 12px;
+  }
+  h2.section-title{
+    font-family:var(--display); font-weight:600;
+    font-size:clamp(1.6rem, 3.2vw, 2.2rem);
+    margin:0; letter-spacing:-0.01em;
+  }
+  .dark h2.section-title{color:var(--text-light);}
+  .light h2.section-title{color:var(--text-dark);}
+
+  .light{background:var(--paper); color:var(--text-dark);}
+  .light .kicker{color:#3D8A85;}
+
+  /* ABOUT */
+  .about-grid{display:grid; grid-template-columns: 1.4fr 1fr; gap:56px;}
+  @media (max-width:760px){ .about-grid{grid-template-columns:1fr;} }
+  .about-text p{font-size:1.02rem; color:var(--text-light-dim); margin:0 0 18px;}
+  .about-text a{color:var(--accent-2); text-decoration:underline; text-underline-offset:3px;}
+  .about-facts{
+    border:1px solid var(--line-dark); border-radius:6px; padding:24px;
+    font-family:var(--mono); font-size:13px;
+  }
+  .fact-row{display:flex; justify-content:space-between; gap:12px; padding:10px 0; border-bottom:1px solid var(--line-dark);}
+  .fact-row:last-child{border-bottom:none;}
+  .fact-k{color:var(--text-light-dim);}
+  .fact-v{color:var(--text-light); text-align:right;}
+
+  /* RECOGNITION strip */
+  .recognition{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:1px;
+    background:var(--line-dark); border:1px solid var(--line-dark); border-radius:6px; overflow:hidden;
+    margin-top:36px;
+  }
+  @media (max-width:640px){ .recognition{grid-template-columns:1fr;} }
+  .rec-item{background:var(--ink); padding:22px 20px;}
+  .rec-num{font-family:var(--display); font-weight:700; font-size:1.7rem; color:var(--accent); line-height:1;}
+  .rec-label{font-family:var(--mono); font-size:11.5px; color:var(--text-light-dim); margin-top:8px; letter-spacing:0.02em;}
+
+  /* EXPERIENCE pipeline */
+  .pipeline{position:relative; padding-left:32px;}
+  .pipeline::before{
+    content:""; position:absolute; left:6px; top:6px; bottom:6px; width:1px;
+    background:linear-gradient(var(--accent-2), var(--line-dark));
+  }
+  .pl-item{position:relative; padding-bottom:44px;}
+  .pl-item:last-child{padding-bottom:0;}
+  .pl-dot{
+    position:absolute; left:-32px; top:4px; width:13px; height:13px; border-radius:50%;
+    background:var(--ink); border:2px solid var(--accent-2);
+  }
+  .pl-item.current .pl-dot{background:var(--accent); border-color:var(--accent); box-shadow:0 0 0 4px rgba(231,169,76,0.15);}
+  .pl-date{font-family:var(--mono); font-size:12px; color:var(--text-light-dim); letter-spacing:0.03em; margin-bottom:6px;}
+  .pl-role{font-family:var(--display); font-weight:600; font-size:1.15rem; color:var(--text-light); margin:0 0 2px;}
+  .pl-org{font-size:0.92rem; color:var(--accent-2); margin:0 0 10px; font-weight:500;}
+  .pl-desc{font-size:0.95rem; color:var(--text-light-dim); max-width:620px;}
+  .pl-desc ul{margin:8px 0 0; padding-left:18px;}
+  .pl-desc li{margin-bottom:6px;}
+
+  /* WORK cards */
+  .cases{display:flex; flex-direction:column; gap:20px;}
+  .case-card{
+    background:#fff; border:1px solid var(--line-light); border-radius:8px;
+    padding:30px 32px;
+  }
+  .case-card.placeholder-card{
+    background:transparent; border:1.5px dashed #3D8A85;
+  }
+  .case-card.placeholder-card .case-title{color:#2E6D69;}
+  .case-card.placeholder-card .case-body{font-style:italic;}
+  .case-tags{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;}
+  .tag{
+    font-family:var(--mono); font-size:11px; letter-spacing:0.04em; text-transform:uppercase;
+    padding:5px 10px; border:1px solid #3D8A85; color:#2E6D69; border-radius:20px;
+  }
+  .case-title{font-family:var(--display); font-weight:600; font-size:1.25rem; margin:0 0 10px; color:var(--text-dark);}
+  .case-body{color:var(--text-dark-dim); font-size:0.97rem; margin:0;}
+  .case-metrics{
+    display:flex; gap:22px; flex-wrap:wrap; margin-top:16px; padding-top:16px;
+    border-top:1px dashed var(--line-light);
+  }
+  .metric{font-family:var(--mono); font-size:12.5px; color:var(--text-dark);}
+  .metric b{color:#2E6D69; font-size:1.05rem; display:block;}
+
+  /* SKILLS */
+  .skill-cloud{display:flex; flex-wrap:wrap; gap:10px;}
+  .skill-pill{
+    font-family:var(--mono); font-size:12.5px; padding:9px 16px;
+    border:1px solid var(--line-dark); border-radius:20px; color:var(--text-light-dim);
+    transition:border-color .2s, color .2s;
+  }
+  .skill-pill:hover{border-color:var(--accent-2); color:var(--text-light);}
+
+  /* EDUCATION + LANG */
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:56px;}
+  @media (max-width:760px){ .two-col{grid-template-columns:1fr;} }
+  .edu-item{margin-bottom:22px;}
+  .edu-item:last-child{margin-bottom:0;}
+  .edu-degree{font-weight:600; color:var(--text-light); font-size:0.98rem;}
+  .edu-school{color:var(--accent-2); font-size:0.9rem; margin:2px 0;}
+  .edu-date{font-family:var(--mono); font-size:11.5px; color:var(--text-light-dim);}
+  .lang-row{display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--line-dark); font-size:0.95rem;}
+  .lang-level{font-family:var(--mono); font-size:12px; color:var(--accent-2);}
+
+  .cert-list{list-style:none; margin:0; padding:0;}
+  .cert-item{
+    display:flex; justify-content:space-between; gap:12px; padding:10px 0;
+    border-bottom:1px solid var(--line-dark); font-size:0.92rem; color:var(--text-light-dim);
+  }
+  .cert-item:last-child{border-bottom:none;}
+  .cert-year{font-family:var(--mono); font-size:11.5px; color:var(--text-light-dim); white-space:nowrap;}
+
+  /* CONTACT */
+  .contact{background:var(--ink-2);}
+  .contact-inner{text-align:center;}
+  .contact h2{
+    font-family:var(--display); font-weight:600; font-size:clamp(1.8rem,4vw,2.6rem);
+    margin:0 0 18px; color:var(--text-light);
+  }
+  .contact p{color:var(--text-light-dim); max-width:520px; margin:0 auto 36px;}
+  .contact-links{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:56px;}
+  .status-line{
+    font-family:var(--mono); font-size:12px; color:var(--text-light-dim);
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    letter-spacing:0.02em;
+  }
+  .status-dot{width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 3px rgba(231,169,76,0.2);}
+
+  /* CONTACT FORM */
+  .contact-form{
+    max-width:460px; margin:0 auto 40px; text-align:left;
+    display:flex; flex-direction:column; gap:18px;
+  }
+  .form-row{display:flex; flex-direction:column; gap:7px;}
+  .form-row label{
+    font-family:var(--mono); font-size:11.5px; letter-spacing:0.05em; text-transform:uppercase;
+    color:var(--text-light-dim);
+  }
+  .form-row input, .form-row textarea{
+    font-family:var(--body); font-size:14.5px; color:var(--text-light);
+    background:var(--ink); border:1px solid var(--line-dark); border-radius:4px;
+    padding:11px 13px; resize:vertical;
+    transition:border-color .2s;
+  }
+  .form-row input:focus, .form-row textarea:focus{
+    outline:none; border-color:var(--accent-2);
+  }
+  .contact-form .btn{
+    align-self:flex-start; border:none; cursor:pointer; font-family:var(--mono);
+  }
+  .form-note{
+    font-family:var(--mono); font-size:11px; color:var(--text-light-dim);
+    margin:2px 0 0; text-align:left;
+  }
+  .form-status{
+    font-family:var(--mono); font-size:12px; margin-top:4px; text-align:left;
+    color:var(--accent-2); display:none;
+  }
+  .form-status.show{display:block;}
+  .divider-or{
+    display:flex; align-items:center; gap:14px; max-width:460px; margin:0 auto 32px;
+    font-family:var(--mono); font-size:11px; color:var(--text-light-dim); letter-spacing:0.08em;
+  }
+  .divider-or::before, .divider-or::after{content:""; flex:1; height:1px; background:var(--line-dark);}
+
+  footer{
+    border-top:1px solid var(--line-dark); padding:24px 0; text-align:center;
+    font-family:var(--mono); font-size:11px; color:var(--text-light-dim);
+  }
+
+  .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:none;}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="mark"><span class="mark-box">PS</span> Pedro Scheik</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#work" data-i18n="nav.work">Selected Work</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <a class="icon-link" href="https://github.com/pedroscheik" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub — confirm/replace with your actual profile URL">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.16 1.18a10.9 10.9 0 015.75 0c2.2-1.49 3.16-1.18 3.16-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.8.55A10.99 10.99 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+      </a>
+      <div class="lang-switch" role="group" aria-label="Language selector">
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <button class="lang-btn" data-lang="pt" type="button">PT</button>
+        <button class="lang-btn" data-lang="es" type="button">ES</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="hero.eyebrow">Digital & Business Transformation · Strategy · AI</p>
+    <h1 class="name">Pedro Enrique&nbsp;Scheik</h1>
+    <p class="hero-sub" data-i18n-html="hero.sub">I connect strategy, people and technology to turn business ambition into <strong>measurable results</strong> — leading transformation, AI adoption and operational excellence initiatives across multinational organizations.</p>
+
+    <div class="hero-badges">
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z"/></svg><span data-i18n="hero.badge1">1st Place — Process Innovation, 2025</span></span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z"/></svg><span data-i18n="hero.badge2">5th Place — Technology & Systems Innovation, 2024</span></span>
+    </div>
+
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#work" data-i18n="hero.btnWork">See selected work</a>
+      <a class="btn btn-line" href="mailto:pedro.scheik@gmail.com" data-i18n="hero.btnContact">Get in touch</a>
+      <a class="btn btn-line" href="https://www.linkedin.com/in/pedro-enrique-scheik-447273183" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+
+    <div class="flow" aria-hidden="true">
+      <svg viewBox="0 0 760 140" xmlns="http://www.w3.org/2000/svg">
+        <path class="flow-path" d="M60,70 H240 M300,70 H480 M540,70 H700"/>
+        <circle class="flow-node-ring" cx="60" cy="70" r="26"/>
+        <circle class="flow-node" cx="60" cy="70" r="18"/>
+        <circle class="flow-node-ring" cx="300" cy="70" r="26"/>
+        <circle class="flow-node" cx="300" cy="70" r="18"/>
+        <circle class="flow-node-ring" cx="540" cy="70" r="26"/>
+        <circle class="flow-node" cx="540" cy="70" r="18"/>
+        <circle class="flow-node-ring" cx="700" cy="70" r="26"/>
+        <circle class="flow-node lit" cx="700" cy="70" r="18"/>
+        <text class="flow-label" x="60" y="116" text-anchor="middle" data-i18n="hero.flow1">CHALLENGE</text>
+        <text class="flow-label" x="300" y="116" text-anchor="middle" data-i18n="hero.flow2">STRATEGY</text>
+        <text class="flow-label" x="540" y="116" text-anchor="middle" data-i18n="hero.flow3">TRANSFORMATION</text>
+        <text class="flow-label hl" x="700" y="116" text-anchor="middle" data-i18n="hero.flow4">IMPACT</text>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section class="dark" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker" data-i18n="about.kicker">About</p>
+      <h2 class="section-title" data-i18n="about.title">Strategy first, technology as the lever</h2>
+    </div>
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p data-i18n="about.p1">I've spent the last decade figuring out how businesses actually work — not on paper, but in practice. I started out mapping processes on the ground, at a shared services center, learning what breaks when a handoff between teams isn't designed carefully. That early, hands-on view of operations is still the lens I bring to every strategic conversation I'm part of today.</p>
+        <p data-i18n="about.p2">These days I lead digital and business transformation initiatives — the kind that start as a slide in a strategy deck and end as something hundreds of people actually use. I care about getting the strategy right, but I care just as much about the messy part in between: aligning stakeholders, driving the change, and making sure adoption isn't left to chance. That combination is what let me contribute to a B2B expansion that generated ~R$24M in its first year, and to a competency program that changed how ~90 people were developed.</p>
+        <p data-i18n-html="about.p3">I'm currently pursuing an MBA in Management &amp; Digital Transformation at <a href="https://www5.usp.br/" target="_blank" rel="noopener">Universidade de São Paulo</a>, and I'm looking for a remote role where I can operate at that same intersection — close enough to strategy to help shape direction, close enough to execution to make sure it actually happens. I've presented strategy in English to audiences of 400+, and I'm comfortable working async with teams in the US and Europe.</p>
+      </div>
+      <div class="about-facts">
+        <div class="fact-row"><span class="fact-k" data-i18n="about.f1k">Based in</span><span class="fact-v">Limeira, SP — Brazil (GMT-3)</span></div>
+        <div class="fact-row"><span class="fact-k" data-i18n="about.f2k">Focus</span><span class="fact-v" data-i18n="about.f2v">Strategy &amp; Digital Transformation</span></div>
+        <div class="fact-row"><span class="fact-k" data-i18n="about.f3k">Core levers</span><span class="fact-v" data-i18n="about.f3v">Strategy · Change · AI</span></div>
+        <div class="fact-row"><span class="fact-k" data-i18n="about.f4k">English</span><span class="fact-v" data-i18n="about.f4v">Full professional</span></div>
+        <div class="fact-row"><span class="fact-k" data-i18n="about.f5k">Studying</span><span class="fact-v" data-i18n="about.f5v">MBA, Digital Transformation — USP</span></div>
+      </div>
+    </div>
+
+    <div class="recognition reveal">
+      <div class="rec-item">
+        <div class="rec-num">R$24M</div>
+        <div class="rec-label" data-i18n="rec.item1">First-year impact, strategic B2B channel expansion</div>
+      </div>
+      <div class="rec-item">
+        <div class="rec-num">#1</div>
+        <div class="rec-label" data-i18n="rec.item2">Process Innovation Award, 2025</div>
+      </div>
+      <div class="rec-item">
+        <div class="rec-num">#5</div>
+        <div class="rec-label" data-i18n="rec.item3">Technology &amp; Systems Innovation, 2024</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker" data-i18n="exp.kicker">Career path</p>
+      <h2 class="section-title" data-i18n="exp.title">Experience</h2>
+    </div>
+
+    <div class="pipeline reveal">
+      <div class="pl-item current">
+        <div class="pl-dot"></div>
+        <div class="pl-date">SEP 2025 — MAR 2026</div>
+        <div class="pl-role" data-i18n="exp.role1">Digital Transformation &amp; Automation Specialist (R&amp;D)</div>
+        <div class="pl-org">Ajinomoto do Brasil</div>
+        <div class="pl-desc" data-i18n="exp.desc1">Led strategic digital transformation, AI and operational excellence initiatives — partnering directly with business areas on opportunity identification, process redesign and solution rollout. Structured a competency program reaching ~90 employees and presented strategy to 400+ people across Brazil and Peru.</div>
+      </div>
+      <div class="pl-item">
+        <div class="pl-dot"></div>
+        <div class="pl-date">SEP 2023 — SEP 2025</div>
+        <div class="pl-role" data-i18n="exp.role2">R&amp;D Senior Analyst — Planning &amp; Strategy</div>
+        <div class="pl-org">Ajinomoto do Brasil</div>
+        <div class="pl-desc" data-i18n="exp.desc2">Owned strategic planning for innovation and digital transformation. Conceived the Skill App knowledge-management platform and developed a corporate AI chatbot with Copilot Studio, operating across R&amp;D, IT and business.</div>
+      </div>
+      <div class="pl-item">
+        <div class="pl-dot"></div>
+        <div class="pl-date">DEC 2019 — SEP 2023</div>
+        <div class="pl-role" data-i18n="exp.role3">Commercial Operations Analyst</div>
+        <div class="pl-org">GPA (Grupo Pão de Açúcar)</div>
+        <div class="pl-desc" data-i18n="exp.desc3">Delivered market intelligence and strategic support to commercial leadership at one of Brazil's largest retailers. Contributed to a strategic B2B channel expansion project generating ~R$24M in impact in its first year.</div>
+      </div>
+      <div class="pl-item">
+        <div class="pl-dot"></div>
+        <div class="pl-date">JAN 2016 — DEC 2019</div>
+        <div class="pl-role" data-i18n="exp.role4">Continuous Improvement Analyst — Shared Services Center</div>
+        <div class="pl-org">GPA (Grupo Pão de Açúcar)</div>
+        <div class="pl-desc" data-i18n="exp.desc4">Mapped, standardized and optimized business processes applying Lean, Kaizen, PDCA, DMAIC and 5W2H — the methodological foundation that still shapes how I approach transformation today.</div>
+      </div>
+      <div class="pl-item">
+        <div class="pl-dot"></div>
+        <div class="pl-date">JAN 2014 — JAN 2015</div>
+        <div class="pl-role" data-i18n="exp.role5">IT Systems Support Trainee</div>
+        <div class="pl-org">PwC Brazil</div>
+        <div class="pl-desc" data-i18n="exp.desc5">First exposure to enterprise systems and business support at scale, inside a multinational professional services environment.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker" data-i18n="work.kicker">Selected work</p>
+      <h2 class="section-title" data-i18n="work.title">A few initiatives I've led</h2>
+    </div>
+
+    <div class="cases reveal">
+      <div class="case-card">
+        <div class="case-tags"><span class="tag" data-i18n="work.tag.strategy">Strategy</span><span class="tag" data-i18n="work.tag.commercial">Commercial</span><span class="tag" data-i18n="work.tag.crossfunctional">Cross-functional Leadership</span></div>
+        <h3 class="case-title" data-i18n="work.c1.title">B2B Multichannel Expansion Strategy</h3>
+        <p class="case-body" data-i18n="work.c1.body">Contributed to a strategic initiative to expand GPA's B2B commercial channel — working across commercial, operations and market intelligence to structure the approach, define indicators and support execution. The project generated approximately R$24 million in impact in its first year.</p>
+        <div class="case-metrics">
+          <div class="metric"><b>R$24M</b><span data-i18n="work.c1.mv">first-year impact</span></div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-tags"><span class="tag">Copilot Studio</span><span class="tag" data-i18n="work.tag.ai">AI Strategy</span><span class="tag" data-i18n="work.tag.knowledge">Knowledge Management</span></div>
+        <h3 class="case-title" data-i18n="work.c2.title">Corporate AI Chatbot &amp; Skill App Platform</h3>
+        <p class="case-body" data-i18n="work.c2.body">Conceived and helped build the Skill App platform for knowledge management and competency development, then developed a corporate AI chatbot on Microsoft Copilot Studio to make that knowledge accessible on demand — part of a broader strategy to turn tacit knowledge into a shared asset.</p>
+        <div class="case-metrics">
+          <div class="metric"><b data-i18n="work.c2.mk">Concept to launch</b><span data-i18n="work.c2.mv">strategy, design and delivery</span></div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-tags"><span class="tag">Power Apps</span><span class="tag" data-i18n="work.tag.change">Change Management</span><span class="tag" data-i18n="work.tag.process">Process Design</span></div>
+        <h3 class="case-title" data-i18n="work.c3.title">Corporate Risk Management Platform</h3>
+        <p class="case-body" data-i18n="work.c3.body">Risk tracking was scattered across spreadsheets nobody trusted equally. I led the initiative end-to-end — from requirements and process redesign through stakeholder alignment, training and go-live — so adoption wasn't left to chance.</p>
+        <div class="case-metrics">
+          <div class="metric"><b data-i18n="work.c3.mk">End-to-end</b><span data-i18n="work.c3.mv">strategy → design → change management → adoption</span></div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-tags"><span class="tag" data-i18n="work.tag.people">People Strategy</span><span class="tag" data-i18n="work.tag.change">Change Management</span></div>
+        <h3 class="case-title" data-i18n="work.c4.title">Competency &amp; Upskilling Program</h3>
+        <p class="case-body" data-i18n="work.c4.body">Structured a competency management and workforce upskilling program designed to close capability gaps and strengthen organizational readiness for digital change — later presented as part of a broader transformation strategy to 400+ employees across Brazil and Peru.</p>
+        <div class="case-metrics">
+          <div class="metric"><b>~90</b><span data-i18n="work.c4.mv">employees impacted</span></div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-tags"><span class="tag">Lean · Kaizen · DMAIC</span><span class="tag" data-i18n="work.tag.excellence">Process Excellence</span></div>
+        <h3 class="case-title" data-i18n="work.c5.title">Process Excellence at the Shared Services Center</h3>
+        <p class="case-body" data-i18n="work.c5.body">Mapped, standardized and optimized core business processes applying Lean, Kaizen, PDCA, DMAIC and 5W2H — building the management indicators and controls that gave leadership visibility they didn't have before. This is the methodological foundation I still bring to every transformation initiative.</p>
+        <div class="case-metrics">
+          <div class="metric"><b data-i18n="work.c5.mk">Foundational</b><span data-i18n="work.c5.mv">methodology behind every later initiative</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker" data-i18n="projects.kicker">Personal projects</p>
+      <h2 class="section-title" data-i18n="projects.title">What I build on my own time</h2>
+    </div>
+    <div class="cases reveal">
+      <div class="case-card placeholder-card">
+        <div class="case-tags"><span class="tag">SaaS</span></div>
+        <h3 class="case-title" data-i18n="projects.p1.title">[Project name — tell me what to put here]</h3>
+        <p class="case-body" data-i18n="projects.p1.body">[Short description: what it does, why you built it, and the stack you used.]</p>
+        <div class="case-metrics">
+          <div class="metric"><b data-i18n="projects.p1.mk">Status</b><span data-i18n="projects.p1.mv">Send me the details and I'll fill this in</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker" data-i18n="skills.kicker">Toolkit</p>
+      <h2 class="section-title" data-i18n="skills.title">Core competencies</h2>
+    </div>
+    <div class="skill-cloud reveal">
+      <span class="skill-pill" data-i18n="skills.digital">Digital Transformation</span>
+      <span class="skill-pill" data-i18n="skills.strategy">Strategy</span>
+      <span class="skill-pill" data-i18n="skills.change">Change Management</span>
+      <span class="skill-pill" data-i18n="skills.ai">Artificial Intelligence</span>
+      <span class="skill-pill" data-i18n="skills.businessAnalysis">Business Analysis</span>
+      <span class="skill-pill" data-i18n="skills.excellence">Process Excellence</span>
+      <span class="skill-pill" data-i18n="skills.stakeholder">Stakeholder Management</span>
+      <span class="skill-pill" data-i18n="skills.projectMgmt">Project Management</span>
+      <span class="skill-pill">Power BI</span>
+      <span class="skill-pill">Power Apps</span>
+      <span class="skill-pill">Power Automate</span>
+      <span class="skill-pill">Copilot Studio</span>
+      <span class="skill-pill">Azure AI Foundry</span>
+      <span class="skill-pill">SharePoint</span>
+      <span class="skill-pill">SQL</span>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">Git</span>
+      <span class="skill-pill" data-i18n="skills.dataWarehouse">Data Warehouse</span>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap two-col reveal">
+    <div>
+      <p class="kicker" data-i18n="edu.kicker">Education</p>
+      <h2 class="section-title" style="margin-bottom:28px;" data-i18n="edu.title">Academic background</h2>
+      <div class="edu-item">
+        <div class="edu-degree" data-i18n="edu.d1">MBA, Management &amp; Digital Transformation</div>
+        <div class="edu-school">Universidade de São Paulo (USP)</div>
+        <div class="edu-date" data-i18n="edu.date1">Expected Apr 2027</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree" data-i18n="edu.d2">Bachelor's Degree, Business Administration</div>
+        <div class="edu-school">Centro Universitário FMU | FIAM-FAAM</div>
+        <div class="edu-date" data-i18n="edu.date2">Completed Dec 2023</div>
+      </div>
+    </div>
+    <div>
+      <p class="kicker" data-i18n="lang.kicker">Languages</p>
+      <h2 class="section-title" style="margin-bottom:28px;" data-i18n="lang.title">Working languages</h2>
+      <div class="lang-row"><span data-i18n="lang.pt">Portuguese</span><span class="lang-level" data-i18n="lang.ptLevel">NATIVE</span></div>
+      <div class="lang-row"><span data-i18n="lang.en">English</span><span class="lang-level" data-i18n="lang.enLevel">FULL PROFESSIONAL</span></div>
+      <div class="lang-row"><span data-i18n="lang.es">Spanish</span><span class="lang-level" data-i18n="lang.esLevel">INTERMEDIATE</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <p class="kicker" data-i18n="cert.kicker">Continuous learning</p>
+    <h2 class="section-title" style="margin-bottom:28px;" data-i18n="cert.title">Courses &amp; certifications</h2>
+    <ul class="cert-list reveal">
+      <li class="cert-item"><span data-i18n="cert.1">Data Visualization with Python — AlfaHelix</span><span class="cert-year">2026</span></li>
+      <li class="cert-item"><span data-i18n="cert.2">Advanced Excel — Learn Treinamentos</span><span class="cert-year">2025</span></li>
+      <li class="cert-item"><span data-i18n="cert.3">Applied Statistics — IFRS</span><span class="cert-year">2023</span></li>
+      <li class="cert-item"><span data-i18n="cert.4">Strategic Management — IFRS</span><span class="cert-year">2023</span></li>
+      <li class="cert-item"><span data-i18n="cert.5">Financial Planning — IFRS</span><span class="cert-year">2023</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-inner reveal">
+    <p class="kicker" style="justify-content:center; display:flex;" data-i18n="contact.kicker">Let's talk</p>
+    <h2 data-i18n-html="contact.title">Open to remote strategic roles<br>in USD or EUR.</h2>
+    <p data-i18n="contact.body">If your team needs someone who can move fluidly between boardroom strategy and hands-on execution — let's talk. I reply fast and I'm easy to schedule with across US and European time zones.</p>
+
+    <form class="contact-form" id="contact-form" novalidate>
+      <div class="form-row">
+        <label for="cf-name" data-i18n="contact.form.name">Name</label>
+        <input type="text" id="cf-name" name="name" autocomplete="name" required>
+      </div>
+      <div class="form-row">
+        <label for="cf-whatsapp" data-i18n="contact.form.whatsapp">WhatsApp</label>
+        <input type="tel" id="cf-whatsapp" name="whatsapp" autocomplete="tel" placeholder="+1 555 123 4567">
+      </div>
+      <div class="form-row">
+        <label for="cf-email" data-i18n="contact.form.email">Email</label>
+        <input type="email" id="cf-email" name="email" autocomplete="email" required>
+      </div>
+      <div class="form-row">
+        <label for="cf-message" data-i18n="contact.form.message">Message</label>
+        <textarea id="cf-message" name="message" rows="5"></textarea>
+      </div>
+      <button type="submit" class="btn btn-solid" data-i18n="contact.form.submit">Send message</button>
+      <p class="form-note" data-i18n="contact.form.note">This opens your email app with everything filled in, addressed to pedro.scheik@gmail.com — you just hit send.</p>
+      <p class="form-status" id="cf-status"></p>
+    </form>
+
+    <p class="divider-or" data-i18n="contact.or">OR REACH ME DIRECTLY</p>
+
+    <div class="contact-links">
+      <a class="btn btn-line" href="mailto:pedro.scheik@gmail.com">pedro.scheik@gmail.com</a>
+      <a class="btn btn-line" href="https://www.linkedin.com/in/pedro-enrique-scheik-447273183" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn btn-line" href="https://wa.me/5511977691304" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p class="status-line"><span class="status-dot"></span> <span data-i18n="contact.status">Based in Brazil (GMT-3) — overlaps well with US and European working hours</span></p>
+  </div>
+</section>
+
+
+<footer>
+  <span data-i18n="footer.text">© 2026 Pedro Enrique Scheik</span>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  /* ---------------- i18n ---------------- */
+  const translations = {
+    en: {
+      "nav.about":"About","nav.experience":"Experience","nav.work":"Selected Work","nav.projects":"Projects","nav.contact":"Contact",
+      "hero.eyebrow":"Digital & Business Transformation · Strategy · AI",
+      "hero.sub":"I connect strategy, people and technology to turn business ambition into <strong>measurable results</strong> — leading transformation, AI adoption and operational excellence initiatives across multinational organizations.",
+      "hero.badge1":"1st Place — Process Innovation, 2025",
+      "hero.badge2":"5th Place — Technology & Systems Innovation, 2024",
+      "hero.btnWork":"See selected work","hero.btnContact":"Get in touch",
+      "hero.flow1":"CHALLENGE","hero.flow2":"STRATEGY","hero.flow3":"TRANSFORMATION","hero.flow4":"IMPACT",
+      "about.kicker":"About","about.title":"Strategy first, technology as the lever",
+      "about.p1":"I've spent the last decade figuring out how businesses actually work — not on paper, but in practice. I started out mapping processes on the ground, at a shared services center, learning what breaks when a handoff between teams isn't designed carefully. That early, hands-on view of operations is still the lens I bring to every strategic conversation I'm part of today.",
+      "about.p2":"These days I lead digital and business transformation initiatives — the kind that start as a slide in a strategy deck and end as something hundreds of people actually use. I care about getting the strategy right, but I care just as much about the messy part in between: aligning stakeholders, driving the change, and making sure adoption isn't left to chance. That combination is what let me contribute to a B2B expansion that generated ~R$24M in its first year, and to a competency program that changed how ~90 people were developed.",
+      "about.p3":"I'm currently pursuing an MBA in Management &amp; Digital Transformation at <a href=\"https://www5.usp.br/\" target=\"_blank\" rel=\"noopener\">Universidade de São Paulo</a>, and I'm looking for a remote role where I can operate at that same intersection — close enough to strategy to help shape direction, close enough to execution to make sure it actually happens. I've presented strategy in English to audiences of 400+, and I'm comfortable working async with teams in the US and Europe.",
+      "about.f1k":"Based in","about.f2k":"Focus","about.f2v":"Strategy & Digital Transformation",
+      "about.f3k":"Core levers","about.f3v":"Strategy · Change · AI",
+      "about.f4k":"English","about.f4v":"Full professional",
+      "about.f5k":"Studying","about.f5v":"MBA, Digital Transformation — USP",
+      "rec.item1":"First-year impact, strategic B2B channel expansion",
+      "rec.item2":"Process Innovation Award, 2025",
+      "rec.item3":"Technology & Systems Innovation, 2024",
+      "exp.kicker":"Career path","exp.title":"Experience",
+      "exp.role1":"Digital Transformation & Automation Specialist (R&D)",
+      "exp.desc1":"Led strategic digital transformation, AI and operational excellence initiatives — partnering directly with business areas on opportunity identification, process redesign and solution rollout. Structured a competency program reaching ~90 employees and presented strategy to 400+ people across Brazil and Peru.",
+      "exp.role2":"R&D Senior Analyst — Planning & Strategy",
+      "exp.desc2":"Owned strategic planning for innovation and digital transformation. Conceived the Skill App knowledge-management platform and developed a corporate AI chatbot with Copilot Studio, operating across R&D, IT and business.",
+      "exp.role3":"Commercial Operations Analyst",
+      "exp.desc3":"Delivered market intelligence and strategic support to commercial leadership at one of Brazil's largest retailers. Contributed to a strategic B2B channel expansion project generating ~R$24M in impact in its first year.",
+      "exp.role4":"Continuous Improvement Analyst — Shared Services Center",
+      "exp.desc4":"Mapped, standardized and optimized business processes applying Lean, Kaizen, PDCA, DMAIC and 5W2H — the methodological foundation that still shapes how I approach transformation today.",
+      "exp.role5":"IT Systems Support Trainee",
+      "exp.desc5":"First exposure to enterprise systems and business support at scale, inside a multinational professional services environment.",
+      "work.kicker":"Selected work","work.title":"A few initiatives I've led",
+      "work.tag.strategy":"Strategy","work.tag.commercial":"Commercial","work.tag.crossfunctional":"Cross-functional Leadership",
+      "work.tag.ai":"AI Strategy","work.tag.knowledge":"Knowledge Management","work.tag.change":"Change Management",
+      "work.tag.process":"Process Design","work.tag.people":"People Strategy","work.tag.excellence":"Process Excellence",
+      "work.c1.title":"B2B Multichannel Expansion Strategy",
+      "work.c1.body":"Contributed to a strategic initiative to expand GPA's B2B commercial channel — working across commercial, operations and market intelligence to structure the approach, define indicators and support execution. The project generated approximately R$24 million in impact in its first year.",
+      "work.c1.mv":"first-year impact",
+      "work.c2.title":"Corporate AI Chatbot & Skill App Platform",
+      "work.c2.body":"Conceived and helped build the Skill App platform for knowledge management and competency development, then developed a corporate AI chatbot on Microsoft Copilot Studio to make that knowledge accessible on demand — part of a broader strategy to turn tacit knowledge into a shared asset.",
+      "work.c2.mk":"Concept to launch","work.c2.mv":"strategy, design and delivery",
+      "work.c3.title":"Corporate Risk Management Platform",
+      "work.c3.body":"Risk tracking was scattered across spreadsheets nobody trusted equally. I led the initiative end-to-end — from requirements and process redesign through stakeholder alignment, training and go-live — so adoption wasn't left to chance.",
+      "work.c3.mk":"End-to-end","work.c3.mv":"strategy → design → change management → adoption",
+      "work.c4.title":"Competency & Upskilling Program",
+      "work.c4.body":"Structured a competency management and workforce upskilling program designed to close capability gaps and strengthen organizational readiness for digital change — later presented as part of a broader transformation strategy to 400+ employees across Brazil and Peru.",
+      "work.c4.mv":"employees impacted",
+      "work.c5.title":"Process Excellence at the Shared Services Center",
+      "work.c5.body":"Mapped, standardized and optimized core business processes applying Lean, Kaizen, PDCA, DMAIC and 5W2H — building the management indicators and controls that gave leadership visibility they didn't have before. This is the methodological foundation I still bring to every transformation initiative.",
+      "work.c5.mk":"Foundational","work.c5.mv":"methodology behind every later initiative",
+      "skills.kicker":"Toolkit","skills.title":"Core competencies",
+      "skills.digital":"Digital Transformation","skills.strategy":"Strategy","skills.change":"Change Management",
+      "skills.ai":"Artificial Intelligence","skills.businessAnalysis":"Business Analysis","skills.excellence":"Process Excellence",
+      "skills.stakeholder":"Stakeholder Management","skills.projectMgmt":"Project Management","skills.dataWarehouse":"Data Warehouse",
+      "edu.kicker":"Education","edu.title":"Academic background",
+      "edu.d1":"MBA, Management & Digital Transformation","edu.date1":"Expected Apr 2027",
+      "edu.d2":"Bachelor's Degree, Business Administration","edu.date2":"Completed Dec 2023",
+      "lang.kicker":"Languages","lang.title":"Working languages",
+      "lang.pt":"Portuguese","lang.ptLevel":"NATIVE",
+      "lang.en":"English","lang.enLevel":"FULL PROFESSIONAL",
+      "lang.es":"Spanish","lang.esLevel":"INTERMEDIATE",
+      "cert.kicker":"Continuous learning","cert.title":"Courses & certifications",
+      "cert.1":"Data Visualization with Python — AlfaHelix",
+      "cert.2":"Advanced Excel — Learn Treinamentos",
+      "cert.3":"Applied Statistics — IFRS",
+      "cert.4":"Strategic Management — IFRS",
+      "cert.5":"Financial Planning — IFRS",
+      "contact.kicker":"Let's talk","contact.title":"Open to remote strategic roles<br>in USD or EUR.",
+      "contact.body":"If your team needs someone who can move fluidly between boardroom strategy and hands-on execution — let's talk. I reply fast and I'm easy to schedule with across US and European time zones.",
+      "contact.status":"Based in Brazil (GMT-3) — overlaps well with US and European working hours",
+      "contact.form.name":"Name","contact.form.whatsapp":"WhatsApp","contact.form.email":"Email","contact.form.message":"Message",
+      "contact.form.submit":"Send message",
+      "contact.form.note":"This opens your email app with everything filled in, addressed to pedro.scheik@gmail.com — you just hit send.",
+      "contact.form.opened":"Opening your email app…",
+      "contact.or":"OR REACH ME DIRECTLY",
+      "projects.kicker":"Personal projects","projects.title":"What I build on my own time",
+      "projects.p1.title":"[Project name — tell me what to put here]",
+      "projects.p1.body":"[Short description: what it does, why you built it, and the stack you used.]",
+      "projects.p1.mk":"Status","projects.p1.mv":"Send me the details and I'll fill this in",
+      "footer.text":"© 2026 Pedro Enrique Scheik"
+    },
+    pt: {
+      "nav.about":"Sobre","nav.experience":"Experiência","nav.work":"Cases","nav.projects":"Projetos","nav.contact":"Contato",
+      "hero.eyebrow":"Transformação de Negócios · Estratégia · IA",
+      "hero.sub":"Eu conecto estratégia, pessoas e tecnologia para transformar ambição de negócio em <strong>resultados mensuráveis</strong> — liderando iniciativas de transformação, adoção de IA e excelência operacional em organizações multinacionais.",
+      "hero.badge1":"1º Lugar — Inovação de Processos, 2025",
+      "hero.badge2":"5º Lugar — Inovação de Tecnologias e Sistemas, 2024",
+      "hero.btnWork":"Ver projetos","hero.btnContact":"Entrar em contato",
+      "hero.flow1":"DESAFIO","hero.flow2":"ESTRATÉGIA","hero.flow3":"TRANSFORMAÇÃO","hero.flow4":"IMPACTO",
+      "about.kicker":"Sobre","about.title":"Estratégia primeiro, tecnologia como alavanca",
+      "about.p1":"Passei a última década entendendo como negócios realmente funcionam — não no papel, na prática. Comecei mapeando processos no chão da operação, numa central de serviços compartilhados, aprendendo o que quebra quando a passagem de bastão entre times não é bem desenhada. Essa visão inicial, bem prática, de operação, ainda é a lente que uso em toda conversa estratégica da qual participo hoje.",
+      "about.p2":"Hoje lidero iniciativas de transformação digital e de negócios — do tipo que começa como um slide num plano estratégico e termina como algo que centenas de pessoas realmente usam. Me importo em acertar a estratégia, mas me importo igualmente com a parte mais difícil no meio do caminho: alinhar stakeholders, conduzir a mudança e garantir que a adoção não fique ao acaso. Foi essa combinação que me permitiu contribuir para uma expansão B2B que gerou ~R$24 milhões no primeiro ano, e para um programa de competências que mudou como ~90 pessoas foram desenvolvidas.",
+      "about.p3":"Atualmente curso um MBA em Gestão e Transformação Digital na <a href=\"https://www5.usp.br/\" target=\"_blank\" rel=\"noopener\">Universidade de São Paulo</a>, e estou buscando uma posição remota onde eu possa atuar nessa mesma interseção — perto o suficiente da estratégia para ajudar a definir direção, e perto o suficiente da execução para garantir que ela realmente aconteça. Já apresentei estratégia em inglês para públicos de mais de 400 pessoas, e sou confortável trabalhando de forma assíncrona com times nos EUA e na Europa.",
+      "about.f1k":"Baseado em","about.f2k":"Foco","about.f2v":"Estratégia e Transformação Digital",
+      "about.f3k":"Alavancas principais","about.f3v":"Estratégia · Mudança · IA",
+      "about.f4k":"Inglês","about.f4v":"Fluente / profissional completo",
+      "about.f5k":"Estudando","about.f5v":"MBA, Transformação Digital — USP",
+      "rec.item1":"Impacto no primeiro ano, expansão estratégica de canal B2B",
+      "rec.item2":"Prêmio de Inovação de Processos, 2025",
+      "rec.item3":"Inovação de Tecnologias e Sistemas, 2024",
+      "exp.kicker":"Trajetória","exp.title":"Experiência",
+      "exp.role1":"Especialista em Transformação Digital e Automação (P&D)",
+      "exp.desc1":"Liderei iniciativas estratégicas de transformação digital, IA e excelência operacional — atuando diretamente com áreas de negócio na identificação de oportunidades, redesenho de processos e implantação de soluções. Estruturei um programa de competências alcançando ~90 colaboradores e apresentei estratégia para mais de 400 pessoas no Brasil e no Peru.",
+      "exp.role2":"Analista Sênior de P&D — Planejamento e Estratégia",
+      "exp.desc2":"Fui responsável pelo planejamento estratégico de inovação e transformação digital. Concebi a plataforma Skill App de gestão do conhecimento e desenvolvi um chatbot corporativo de IA com Copilot Studio, atuando entre P&D, TI e negócio.",
+      "exp.role3":"Analista de Operações Comerciais",
+      "exp.desc3":"Entreguei inteligência de mercado e suporte estratégico à liderança comercial em uma das maiores varejistas do Brasil. Contribuí para um projeto estratégico de expansão de canal B2B que gerou ~R$24 milhões de impacto no primeiro ano.",
+      "exp.role4":"Analista de Melhoria Contínua — Central de Serviços Compartilhados",
+      "exp.desc4":"Mapeei, padronizei e otimizei processos de negócio aplicando Lean, Kaizen, PDCA, DMAIC e 5W2H — a base metodológica que ainda molda como abordo transformação hoje.",
+      "exp.role5":"Aprendiz de Suporte em Sistemas de TI",
+      "exp.desc5":"Primeiro contato com sistemas corporativos e suporte a negócios em grande escala, dentro de um ambiente multinacional de serviços profissionais.",
+      "work.kicker":"Projetos selecionados","work.title":"Algumas iniciativas que liderei",
+      "work.tag.strategy":"Estratégia","work.tag.commercial":"Comercial","work.tag.crossfunctional":"Liderança Multifuncional",
+      "work.tag.ai":"Estratégia de IA","work.tag.knowledge":"Gestão do Conhecimento","work.tag.change":"Gestão da Mudança",
+      "work.tag.process":"Design de Processos","work.tag.people":"Estratégia de Pessoas","work.tag.excellence":"Excelência de Processos",
+      "work.c1.title":"Estratégia de Expansão Multicanal B2B",
+      "work.c1.body":"Contribuí para uma iniciativa estratégica de expansão do canal comercial B2B do GPA — atuando entre comercial, operações e inteligência de mercado para estruturar a abordagem, definir indicadores e apoiar a execução. O projeto gerou aproximadamente R$24 milhões de impacto no primeiro ano.",
+      "work.c1.mv":"impacto no primeiro ano",
+      "work.c2.title":"Chatbot Corporativo de IA e Plataforma Skill App",
+      "work.c2.body":"Concebi e ajudei a construir a plataforma Skill App de gestão do conhecimento e desenvolvimento de competências, e depois desenvolvi um chatbot corporativo de IA no Microsoft Copilot Studio para tornar esse conhecimento acessível sob demanda — parte de uma estratégia maior de transformar conhecimento tácito em ativo compartilhado.",
+      "work.c2.mk":"Do conceito ao lançamento","work.c2.mv":"estratégia, design e entrega",
+      "work.c3.title":"Plataforma de Gestão de Riscos Corporativos",
+      "work.c3.body":"O controle de riscos estava espalhado em planilhas que ninguém confiava igualmente. Liderei a iniciativa de ponta a ponta — de requisitos e redesenho de processos até alinhamento com stakeholders, treinamento e go-live — para que a adoção não ficasse ao acaso.",
+      "work.c3.mk":"Ponta a ponta","work.c3.mv":"estratégia → design → gestão da mudança → adoção",
+      "work.c4.title":"Programa de Competências e Capacitação",
+      "work.c4.body":"Estruturei um programa de gestão de competências e capacitação da força de trabalho, desenhado para fechar lacunas de capacidade e fortalecer a maturidade organizacional para a mudança digital — posteriormente apresentado como parte de uma estratégia de transformação mais ampla para mais de 400 colaboradores no Brasil e no Peru.",
+      "work.c4.mv":"colaboradores impactados",
+      "work.c5.title":"Excelência de Processos na Central de Serviços Compartilhados",
+      "work.c5.body":"Mapeei, padronizei e otimizei processos centrais de negócio aplicando Lean, Kaizen, PDCA, DMAIC e 5W2H — construindo os indicadores e controles gerenciais que deram à liderança uma visibilidade que antes não existia. Essa é a base metodológica que ainda carrego em toda iniciativa de transformação.",
+      "work.c5.mk":"Fundamental","work.c5.mv":"metodologia por trás de toda iniciativa posterior",
+      "skills.kicker":"Ferramentas","skills.title":"Principais competências",
+      "skills.digital":"Transformação Digital","skills.strategy":"Estratégia","skills.change":"Gestão da Mudança",
+      "skills.ai":"Inteligência Artificial","skills.businessAnalysis":"Business Analysis","skills.excellence":"Excelência de Processos",
+      "skills.stakeholder":"Gestão de Stakeholders","skills.projectMgmt":"Gestão de Projetos","skills.dataWarehouse":"Data Warehouse",
+      "edu.kicker":"Formação","edu.title":"Formação acadêmica",
+      "edu.d1":"MBA, Gestão e Transformação Digital","edu.date1":"Previsão Abr 2027",
+      "edu.d2":"Bacharelado em Administração","edu.date2":"Concluído Dez 2023",
+      "lang.kicker":"Idiomas","lang.title":"Idiomas de trabalho",
+      "lang.pt":"Português","lang.ptLevel":"NATIVO",
+      "lang.en":"Inglês","lang.enLevel":"FLUENTE / PROFISSIONAL COMPLETO",
+      "lang.es":"Espanhol","lang.esLevel":"INTERMEDIÁRIO",
+      "cert.kicker":"Aprendizado contínuo","cert.title":"Cursos e certificações",
+      "cert.1":"Visualização de Dados com Python — AlfaHelix",
+      "cert.2":"Excel Avançado — Learn Treinamentos",
+      "cert.3":"Estatística Aplicada — IFRS",
+      "cert.4":"Administração Estratégica — IFRS",
+      "cert.5":"Planejamento Financeiro — IFRS",
+      "contact.kicker":"Vamos conversar","contact.title":"Aberto a vagas remotas estratégicas<br>em dólar ou euro.",
+      "contact.body":"Se o seu time precisa de alguém que transite bem entre estratégia de alto nível e execução prática — vamos conversar. Respondo rápido e é fácil marcar horários comigo entre fusos dos EUA e da Europa.",
+      "contact.status":"Baseado no Brasil (GMT-3) — boa sobreposição de horário com EUA e Europa",
+      "contact.form.name":"Nome","contact.form.whatsapp":"WhatsApp","contact.form.email":"E-mail","contact.form.message":"Mensagem",
+      "contact.form.submit":"Enviar mensagem",
+      "contact.form.note":"Isso abre seu aplicativo de e-mail com tudo preenchido, endereçado a pedro.scheik@gmail.com — você só precisa enviar.",
+      "contact.form.opened":"Abrindo seu aplicativo de e-mail…",
+      "contact.or":"OU FALE DIRETAMENTE COMIGO",
+      "projects.kicker":"Projetos pessoais","projects.title":"O que eu construo no meu tempo livre",
+      "projects.p1.title":"[Nome do projeto — me diga o que colocar aqui]",
+      "projects.p1.body":"[Descrição curta: o que faz, por que você construiu, e as tecnologias usadas.]",
+      "projects.p1.mk":"Status","projects.p1.mv":"Me envie os detalhes que eu preencho",
+      "footer.text":"© 2026 Pedro Enrique Scheik"
+    },
+    es: {
+      "nav.about":"Sobre mí","nav.experience":"Experiencia","nav.work":"Casos","nav.projects":"Proyectos","nav.contact":"Contacto",
+      "hero.eyebrow":"Transformación de Negocio · Estrategia · IA",
+      "hero.sub":"Conecto estrategia, personas y tecnología para convertir la ambición de negocio en <strong>resultados medibles</strong> — liderando iniciativas de transformación, adopción de IA y excelencia operacional en organizaciones multinacionales.",
+      "hero.badge1":"1er Lugar — Innovación de Procesos, 2025",
+      "hero.badge2":"5º Lugar — Innovación de Tecnología y Sistemas, 2024",
+      "hero.btnWork":"Ver proyectos","hero.btnContact":"Contactar",
+      "hero.flow1":"DESAFÍO","hero.flow2":"ESTRATEGIA","hero.flow3":"TRANSFORMACIÓN","hero.flow4":"IMPACTO",
+      "about.kicker":"Sobre mí","about.title":"Primero la estrategia, la tecnología como palanca",
+      "about.p1":"Pasé la última década entendiendo cómo funcionan realmente los negocios — no en el papel, en la práctica. Empecé mapeando procesos sobre el terreno, en un centro de servicios compartidos, aprendiendo qué se rompe cuando una transferencia entre equipos no está bien diseñada. Esa mirada inicial y práctica de la operación sigue siendo la lente que aplico en cada conversación estratégica de la que formo parte hoy.",
+      "about.p2":"Hoy lidero iniciativas de transformación digital y de negocio — del tipo que empieza como una diapositiva en un plan estratégico y termina siendo algo que cientos de personas realmente usan. Me importa acertar la estrategia, pero me importa igual la parte más difícil en el medio: alinear a los stakeholders, conducir el cambio y asegurar que la adopción no quede al azar. Esa combinación fue lo que me permitió contribuir a una expansión B2B que generó ~R$24 millones en su primer año, y a un programa de competencias que cambió cómo se desarrollaron ~90 personas.",
+      "about.p3":"Actualmente curso un MBA en Gestión y Transformación Digital en la <a href=\"https://www5.usp.br/\" target=\"_blank\" rel=\"noopener\">Universidade de São Paulo</a>, y estoy buscando un rol remoto donde pueda operar en esa misma intersección — lo suficientemente cerca de la estrategia para ayudar a definir el rumbo, y lo suficientemente cerca de la ejecución para asegurar que realmente ocurra. He presentado estrategia en inglés a audiencias de más de 400 personas, y trabajo cómodamente de forma asíncrona con equipos en EE. UU. y Europa.",
+      "about.f1k":"Ubicado en","about.f2k":"Enfoque","about.f2v":"Estrategia y Transformación Digital",
+      "about.f3k":"Palancas principales","about.f3v":"Estrategia · Cambio · IA",
+      "about.f4k":"Inglés","about.f4v":"Profesional completo",
+      "about.f5k":"Estudiando","about.f5v":"MBA, Transformación Digital — USP",
+      "rec.item1":"Impacto en el primer año, expansión estratégica de canal B2B",
+      "rec.item2":"Premio de Innovación de Procesos, 2025",
+      "rec.item3":"Innovación de Tecnología y Sistemas, 2024",
+      "exp.kicker":"Trayectoria","exp.title":"Experiencia",
+      "exp.role1":"Especialista en Transformación Digital y Automatización (I+D)",
+      "exp.desc1":"Lideré iniciativas estratégicas de transformación digital, IA y excelencia operacional — colaborando directamente con áreas de negocio en la identificación de oportunidades, el rediseño de procesos y la implementación de soluciones. Estructuré un programa de competencias que alcanzó a ~90 empleados y presenté estrategia a más de 400 personas en Brasil y Perú.",
+      "exp.role2":"Analista Senior de I+D — Planificación y Estrategia",
+      "exp.desc2":"Estuve a cargo de la planificación estratégica de innovación y transformación digital. Concebí la plataforma Skill App de gestión del conocimiento y desarrollé un chatbot corporativo de IA con Copilot Studio, operando entre I+D, TI y negocio.",
+      "exp.role3":"Analista de Operaciones Comerciales",
+      "exp.desc3":"Entregué inteligencia de mercado y apoyo estratégico a la dirección comercial en una de las mayores cadenas minoristas de Brasil. Contribuí a un proyecto estratégico de expansión de canal B2B que generó ~R$24 millones de impacto en su primer año.",
+      "exp.role4":"Analista de Mejora Continua — Centro de Servicios Compartidos",
+      "exp.desc4":"Mapeé, estandaricé y optimicé procesos de negocio aplicando Lean, Kaizen, PDCA, DMAIC y 5W2H — la base metodológica que todavía moldea cómo abordo la transformación hoy.",
+      "exp.role5":"Pasante de Soporte de Sistemas de TI",
+      "exp.desc5":"Primer contacto con sistemas empresariales y soporte de negocio a gran escala, dentro de un entorno multinacional de servicios profesionales.",
+      "work.kicker":"Proyectos destacados","work.title":"Algunas iniciativas que he liderado",
+      "work.tag.strategy":"Estrategia","work.tag.commercial":"Comercial","work.tag.crossfunctional":"Liderazgo Multifuncional",
+      "work.tag.ai":"Estrategia de IA","work.tag.knowledge":"Gestión del Conocimiento","work.tag.change":"Gestión del Cambio",
+      "work.tag.process":"Diseño de Procesos","work.tag.people":"Estrategia de Personas","work.tag.excellence":"Excelencia de Procesos",
+      "work.c1.title":"Estrategia de Expansión Multicanal B2B",
+      "work.c1.body":"Contribuí a una iniciativa estratégica para expandir el canal comercial B2B de GPA — trabajando entre comercial, operaciones e inteligencia de mercado para estructurar el enfoque, definir indicadores y apoyar la ejecución. El proyecto generó aproximadamente R$24 millones de impacto en su primer año.",
+      "work.c1.mv":"impacto en el primer año",
+      "work.c2.title":"Chatbot Corporativo de IA y Plataforma Skill App",
+      "work.c2.body":"Concebí y ayudé a construir la plataforma Skill App de gestión del conocimiento y desarrollo de competencias, y luego desarrollé un chatbot corporativo de IA en Microsoft Copilot Studio para hacer ese conocimiento accesible bajo demanda — parte de una estrategia más amplia para convertir el conocimiento tácito en un activo compartido.",
+      "work.c2.mk":"Del concepto al lanzamiento","work.c2.mv":"estrategia, diseño y entrega",
+      "work.c3.title":"Plataforma de Gestión de Riesgos Corporativos",
+      "work.c3.body":"El seguimiento de riesgos estaba disperso en hojas de cálculo en las que nadie confiaba por igual. Lideré la iniciativa de principio a fin — desde requisitos y rediseño de procesos hasta alineación con stakeholders, capacitación y puesta en marcha — para que la adopción no quedara al azar.",
+      "work.c3.mk":"De principio a fin","work.c3.mv":"estrategia → diseño → gestión del cambio → adopción",
+      "work.c4.title":"Programa de Competencias y Capacitación",
+      "work.c4.body":"Estructuré un programa de gestión de competencias y capacitación de la fuerza laboral, diseñado para cerrar brechas de capacidad y fortalecer la preparación organizacional para el cambio digital — presentado luego como parte de una estrategia de transformación más amplia a más de 400 empleados en Brasil y Perú.",
+      "work.c4.mv":"empleados impactados",
+      "work.c5.title":"Excelencia de Procesos en el Centro de Servicios Compartidos",
+      "work.c5.body":"Mapeé, estandaricé y optimicé procesos centrales de negocio aplicando Lean, Kaizen, PDCA, DMAIC y 5W2H — construyendo los indicadores y controles de gestión que dieron a la dirección una visibilidad que antes no existía. Esta es la base metodológica que sigo aplicando en cada iniciativa de transformación.",
+      "work.c5.mk":"Fundacional","work.c5.mv":"metodología detrás de cada iniciativa posterior",
+      "skills.kicker":"Herramientas","skills.title":"Competencias principales",
+      "skills.digital":"Transformación Digital","skills.strategy":"Estrategia","skills.change":"Gestión del Cambio",
+      "skills.ai":"Inteligencia Artificial","skills.businessAnalysis":"Business Analysis","skills.excellence":"Excelencia de Procesos",
+      "skills.stakeholder":"Gestión de Stakeholders","skills.projectMgmt":"Gestión de Proyectos","skills.dataWarehouse":"Data Warehouse",
+      "edu.kicker":"Formación","edu.title":"Formación académica",
+      "edu.d1":"MBA, Gestión y Transformación Digital","edu.date1":"Previsto Abr 2027",
+      "edu.d2":"Licenciatura en Administración de Empresas","edu.date2":"Completado Dic 2023",
+      "lang.kicker":"Idiomas","lang.title":"Idiomas de trabajo",
+      "lang.pt":"Portugués","lang.ptLevel":"NATIVO",
+      "lang.en":"Inglés","lang.enLevel":"PROFESIONAL COMPLETO",
+      "lang.es":"Español","lang.esLevel":"INTERMEDIO",
+      "cert.kicker":"Aprendizaje continuo","cert.title":"Cursos y certificaciones",
+      "cert.1":"Visualización de Datos con Python — AlfaHelix",
+      "cert.2":"Excel Avanzado — Learn Treinamentos",
+      "cert.3":"Estadística Aplicada — IFRS",
+      "cert.4":"Administración Estratégica — IFRS",
+      "cert.5":"Planificación Financiera — IFRS",
+      "contact.kicker":"Hablemos","contact.title":"Abierto a roles remotos estratégicos<br>en USD o EUR.",
+      "contact.body":"Si tu equipo necesita a alguien que se mueva con fluidez entre la estrategia de alto nivel y la ejecución práctica — hablemos. Respondo rápido y es fácil coordinar horarios conmigo entre EE. UU. y Europa.",
+      "contact.status":"Radicado en Brasil (GMT-3) — buen solape horario con EE. UU. y Europa",
+      "contact.form.name":"Nombre","contact.form.whatsapp":"WhatsApp","contact.form.email":"Correo electrónico","contact.form.message":"Mensaje",
+      "contact.form.submit":"Enviar mensaje",
+      "contact.form.note":"Esto abre tu aplicación de correo con todo completado, dirigido a pedro.scheik@gmail.com — solo tienes que enviarlo.",
+      "contact.form.opened":"Abriendo tu aplicación de correo…",
+      "contact.or":"O CONTÁCTAME DIRECTAMENTE",
+      "projects.kicker":"Proyectos personales","projects.title":"Lo que construyo en mi tiempo libre",
+      "projects.p1.title":"[Nombre del proyecto — dime qué poner aquí]",
+      "projects.p1.body":"[Descripción breve: qué hace, por qué lo construiste y qué tecnologías usaste.]",
+      "projects.p1.mk":"Estado","projects.p1.mv":"Envíame los detalles y lo completo",
+      "footer.text":"© 2026 Pedro Enrique Scheik"
+    }
+  };
+
+  function applyLang(lang){
+    const dict = translations[lang] || translations.en;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const key = el.getAttribute('data-i18n');
+      if(dict[key] !== undefined) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+      const key = el.getAttribute('data-i18n-html');
+      if(dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn=>{
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt-BR' : lang);
+    localStorage.setItem('site-lang', lang);
+  }
+
+  function detectLang(){
+    const saved = localStorage.getItem('site-lang');
+    if(saved && translations[saved]) return saved;
+    const nav = (navigator.language || 'en').toLowerCase();
+    if(nav.startsWith('pt')) return 'pt';
+    if(nav.startsWith('es')) return 'es';
+    return 'en';
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=> applyLang(btn.getAttribute('data-lang')));
+  });
+
+  applyLang(detectLang());
+
+  /* ---------------- contact form ---------------- */
+  const cfForm = document.getElementById('contact-form');
+  if(cfForm){
+    cfForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('cf-name').value.trim();
+      const whatsapp = document.getElementById('cf-whatsapp').value.trim();
+      const email = document.getElementById('cf-email').value.trim();
+      const message = document.getElementById('cf-message').value.trim();
+
+      const subject = encodeURIComponent('Portfolio contact — ' + (name || 'New message'));
+      const bodyLines = [
+        'Name: ' + (name || '-'),
+        'WhatsApp: ' + (whatsapp || '-'),
+        'Email: ' + (email || '-'),
+        '',
+        'Message:',
+        message || '-'
+      ];
+      const body = encodeURIComponent(bodyLines.join('\n'));
+      window.location.href = 'mailto:pedro.scheik@gmail.com?subject=' + subject + '&body=' + body;
+
+      const status = document.getElementById('cf-status');
+      const dict = translations[document.documentElement.getAttribute('lang') === 'pt-BR' ? 'pt' : (document.documentElement.getAttribute('lang') || 'en')] || translations.en;
+      status.textContent = dict['contact.form.opened'] || 'Opening your email app…';
+      status.classList.add('show');
+    });
+  }
+</script>
+
+</body>
+</html>
